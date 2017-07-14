@@ -63,9 +63,13 @@ print results
 print type(results)
 outputresult = []
 for result in results:
+	max = 0
+	index = 0
 	for i in range(10):
-		if result[i] > 0.2:
-			outputresult.append(i)
+		if result[i] > max:
+			max = result[i]
+			index = i
+	outputresult.append(index)
 print outputresult
 	
 with open ('result.csv', mode='w') as write_file:
