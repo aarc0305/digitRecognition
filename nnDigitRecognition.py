@@ -23,8 +23,6 @@ with open('train.csv') as file:
         lines=csv.reader(file)
         for line in lines:
                 l.append(line)
-l.remove(l[0]) 
-data=np.array(l)  
 l.remove(l[0])
 l=np.array(l)
 label=l[:,0]
