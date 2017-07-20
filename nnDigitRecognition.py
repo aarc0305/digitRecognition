@@ -29,10 +29,11 @@ label=l[:,0]
 data=l[:,1:]
 data = toInt(data)
 label = toInt(label)
-print type(data)
-print data.shape
+#print type(data)
+#print data.shape
 X_train = data.reshape(data.shape[0], -1)/255.
 y_train = np_utils.to_categorical(label, num_classes=10)
+print X_train.shape
 model = Sequential([
     Dense(32, input_dim=784),
     Activation('relu'),
